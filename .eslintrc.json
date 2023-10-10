@@ -1,10 +1,6 @@
 {
   "extends": ["next/core-web-vitals", "plugin:import/recommended", "prettier"],
   "rules": {
-    "import/newline-after-import": [
-      "error",
-      { "count": 1, "exactCount": true, "considerComments": true }
-    ],
     "import/order": [
       "error",
       {
