@@ -1,6 +1,10 @@
 {
   "extends": ["next/core-web-vitals", "plugin:import/recommended", "prettier"],
   "rules": {
+    "import/newline-after-import": [
+      "error",
+      { "count": 1, "exactCount": true, "considerComments": true }
+    ],
     "import/order": [
       "error",
       {
@@ -14,7 +18,9 @@
           "type",
           "unknown"
         ],
-        "pathGroups": [],
+        "pathGroups": [
+          { "pattern": "react", "group": "external", "position": "before" }
+        ],
         "pathGroupsExcludedImportTypes": [],
         "newlines-between": "always",
         "warnOnUnassignedImports": true,
