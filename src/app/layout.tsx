@@ -1,5 +1,7 @@
 import localFont from 'next/font/local'
 
+import RecoilRootProvider from '@/atoms/recoilRootProvider'
+
 import './globals.css'
 
 import type { Metadata } from 'next'
@@ -38,7 +40,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="kr">
-      <body className={pretendard.className}>{children}</body>
+      <body className={pretendard.className}>
+        <main className="mx-auto flex min-h-screen w-[375px] flex-col p-4">
+          <RecoilRootProvider>{children}</RecoilRootProvider>
+        </main>
+      </body>
     </html>
   )
 }
